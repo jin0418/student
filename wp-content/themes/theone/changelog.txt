@@ -1,7 +1,0 @@
-Version 1.1
- - Fixed video issue in mobile devices
-        Changed file: /assets/js/jquery.tubular.1.0.js
-        Changed file: /assets/js/theone.js
-- Fixed parallax issue in mobile:
-        Changed file: /assets/js/theone.js
-Version 1.0
