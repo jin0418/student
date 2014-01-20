@@ -61,13 +61,23 @@
                             <div class="left-header left">
                                 <div id="logo-wrapper" class="logo-wrapper">
                                     <h1>
-                                    <a href="<?php echo site_url(); ?>">
-				                       <?php if(st_get_setting("site_logo")!=''): ?>
-				                        <img src="<?php echo esc_attr(st_get_setting("site_logo")); ?>" alt="<?php  bloginfo('name'); ?>"/>
-				                        <?php else: ?>
-				                        <span class="no-logo"><?php bloginfo('name'); ?></span>
-				                       <?php  endif; ?>
-				                       </a>
+                                        <a href="<?php echo site_url(); ?>/home">
+                                          <!-- キャンペーンページの場合 TABIPPO LOGO -->
+                                          <?php if ( is_page('3062') ) : ?>
+                                              <?php if(st_get_setting("site_logo")!=''): ?>
+                                              <img src="/wp-content/uploads/2013/12/his_tabippo_logo_s.png" class="event" alt="H.I.S.とTABIPPOキャンペーン"/>
+                                              <?php else: ?>
+                                              <span class="no-logo"><?php bloginfo('name'); ?></span>
+                                          <?php  endif; ?>
+                                          <!-- それ以外の場合 -->
+                                          <?php else: ?>
+                                              <?php if(st_get_setting("site_logo")!=''): ?>
+                                              <img src="<?php echo esc_attr(st_get_setting("site_logo")); ?>" alt="<?php  bloginfo('name'); ?>"/>
+                                              <?php else: ?>
+                                              <span class="no-logo"><?php bloginfo('name'); ?></span>
+                                              <?php  endif; ?>
+                                          <?php endif; ?>
+                                        </a>
                                     </h1>
                                 </div><!-- END .logo-wrapper-->
                             </div>
